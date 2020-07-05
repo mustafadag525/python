@@ -1,0 +1,51 @@
+print ("KÝÞÝYE ÖZEL NOT TUTMA SÝSTEMÝ ")
+print ("Sorulara evet veya hayýr ile cevap veriniz!")
+a = input("Kayýt olmak istiyor musunuz:")
+while (a == "evet"):
+   defkullanici = input ("Kullanýcý adýný giriniz:")
+   defparola = input ("Parolayý giriniz:")
+   defparola1=input ("Parolayý tekrar giriniz:")
+   if (defparola == defparola1):
+       print ("Kayýt Ýþlemi Baþarý Ýle Gerçekleþtirildi.")
+       tercih0 = input ("Giriþ yapmak istiyor musunuz ? :")
+       if (tercih0 == "evet"):
+           girdi1 = input ("Kullanýcý adýnýzý giriniz:")
+           girdi2 = input ("Þifrenizi giriniz:")
+           if (girdi1 == defkullanici) and (girdi2 == defparola):
+               print ("Giriþ iþleminiz baþarý ile sonuçlandý")
+               tercih1 =   input ("Not Sistemine girmek istiyor musunuz ? :")
+               if (tercih1 == "evet"):
+                   notlar = input("Eklemek istediðiniz notlarý giriniz:")
+                   tercih2 =input ("Notlarý görüntülemek istiyor musunuz ? :")
+                   if tercih2 == "evet":
+                       print (notlar)
+                       print ("Notlarýnýz bundan ibarettir.")
+                       break
+                   elif tercih2 == "hayýr":
+                       print ("Tercihiniz hayýr olarak algýlandý.")
+                       print ("Programdan çýkýlýyor....")
+                       break
+               elif (tercih1 != "evet") and tercih1=="hayýr":
+                   print ("Tercihiniz hayýr olarak algýlandý.")
+                   print ("Programdan çýkýlýyor....")
+                   break
+           else:
+               print ("Parolanýzý veya kullanýcý adýnýzý yanlýþ girdiniz.")
+               print ("Programdan çýkýlýyor....")
+               break
+       if (tercih0 == "hayýr"):
+           print("Tercihiniz hayýr olarak algýlandý.")
+           print ("Programdan çýkýlýyor...")
+           break
+       else:
+           print ("Tanýmlanamayan girdi alýndý...")
+           print ("Ýþlem sonlandýrýldý...")
+           break
+   else:
+       print("Uyuþmayan parola lütfen tekrar deneyiniz.")
+if (a== "hayýr"):
+   print ("Programdan çýkýþ yapýlýyor...")
+else:
+  print ("Kullandýðýnýz için teþþekürler.")
+  print ("Programdan çýkýlýyor!...")
+

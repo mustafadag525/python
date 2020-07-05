@@ -1,0 +1,37 @@
+# MUSTAFA DAÐ - 19010011042
+print("****ÞÝFRELEME METODU****")
+deger=None
+harfler="a","b","c","d","e","f","g","h","ý","i","j","k","l","m","n","o","ö","p","r","þ","s","t","y","u","v","y","z"
+þifre=input("þifrenizi giriniz:")
+for i in range(10):
+
+   if þifre.center(5):  #center() metodu bir karakter dizisini iki yana yaslamak için kullanýlýr.
+           print(þifre)
+
+   if þifre.startswith(str(i)):
+            print("þifre rakam ile baþlayamaz")
+            print("!!!!!")
+            break
+   elif þifre.endswith(str(i)):
+         print("þifre rakam ile bitemez")
+         print("!!!!!")
+         break
+   if þifre.islower():
+          print("þifre küçük harflerden oluþamaz!!!!")
+          break
+   elif þifre.isupper():
+           print("þifre tamamen büyük harflerden oluþamaz!!!")
+           print("lütfen dikkat edin")
+           break
+   if þifre.istitle() and þifre.endswith(str(i)):
+            print("BÜY")
+
+
+
+
+for i in þifre:
+ if i.isalpha():
+  print("%s alfabetik bir karakter dizisidir"%i)
+ else:
+  print("%s alfabetik bir karakter dizisi degildir"%i)
+  break

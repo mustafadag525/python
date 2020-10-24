@@ -1,13 +1,13 @@
-#BÝR SAYININ TAM BÖLENLERÝNÝ BULMA 
+#BÄ°R SAYININ TAM BÃ–LENLERÄ°NÄ° BULMA 
 def sayinintamboleni(gelensayi):
     tambolenler = []
     toplam=0
     sayac=0
     tumu=[]
     if(gelensayi==0):
-        print("Sýfýrýn tam böleni yoktur")
+        print("SÄ±fÄ±rÄ±n tam bÃ¶leni yoktur")
     elif(gelensayi==1):
-        print("1'in tam böleni kendisidir :)")
+        print("1'in tam bÃ¶leni kendisidir :)")
     else:
         for h in range (2,gelensayi):
             if(gelensayi%h==0):
@@ -29,27 +29,27 @@ def asalmi(sayi):
        return True
  
 while True:
-    alinansayi=input("Tam Bölen Ýçin Sayi giriniz:")
+    alinansayi=input("Tam BÃ¶len Ä°Ã§in Sayi giriniz:")
  
-    #Eðer sayý deðilse except kýsmý çalýþýr.
+    #EÄŸer sayÄ± deÄŸilse except kÄ±smÄ± Ã§alÄ±ÅŸÄ±r.
     try:
         alinansayi = int(alinansayi)
         parcala = sayinintamboleni(alinansayi)
-        # BURADAN DÝZÝ DÖNÜYOR PYTHONDA BUNA LÝSTE DENÝYOR. BUNU PARÇALAYACAÐIZ
+        # BURADAN DÄ°ZÄ° DÃ–NÃœYOR PYTHONDA BUNA LÄ°STE DENÄ°YOR. BUNU PARÃ‡ALAYACAÄžIZ
  
         if (alinansayi < 0):
-            print("Negatif sayý girmeyiniz")
+            print("Negatif sayÄ± girmeyiniz")
         elif (alinansayi == 1):
-            print("1'in tam böleni kendisidir.")
+            print("1'in tam bÃ¶leni kendisidir.")
         elif (asalmi(alinansayi) == True):
-            print("Girilen sayý asaldýr ve tam böleni 1 ve kendisidir.")
+            print("Girilen sayÄ± asaldÄ±r ve tam bÃ¶leni 1 ve kendisidir.")
         else:
             tamboluneneler = parcala[0]
             tambolunentoplami = parcala[1]
             kactanetambolunen = parcala[2]
             print(
-                "Tam bölen sayilar:{} 'dir.\nTam bölünen Sayilarin toplami:{} 'dir.\n{}'adet tam bölünen sayi vardýr.".format(
+                "Tam bÃ¶len sayilar:{} 'dir.\nTam bÃ¶lÃ¼nen Sayilarin toplami:{} 'dir.\n{}'adet tam bÃ¶lÃ¼nen sayi vardÄ±r.".format(
                     tamboluneneler, tambolunentoplami, kactanetambolunen))
  
     except ValueError:
-        print("LÜTFEN SAYI GÝRÝNÝZ.")
+        print("LÃœTFEN SAYI GÄ°RÄ°NÄ°Z.")
